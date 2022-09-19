@@ -1,0 +1,36 @@
+name: Health Report Action
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+  schedule:
+    - cron: "1 0 * * *"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set Up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.9
+      - name: Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      - name: make dir
+        run: |
+          touch jktb_error.txt
+          echo "# Netscape HTTP Cookie File" > jktb_cookies.txt
+      - name: Run Script
+        env:
+          HITWH_USERNAME: ${{ secrets.username }}
+          HITWH_PASSWORD: ${{ secrets.password }}
+          OPENID: ${{ secrets.openid }}
+        run: |
+          python jiankangtianbao.py

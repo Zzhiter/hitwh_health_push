@@ -2,6 +2,7 @@
 import requests
 import time
 import sys
+import os
 import base64
 import http.cookiejar as cookielib
 import ddddocr
@@ -9,9 +10,9 @@ from urllib.parse import urlparse, parse_qs
 
 
 # 以下为需手动配置的信息
-openid = "oxhh3wenwYvirNaWpSADKh8_yf6k"  # 微信openid
-username = "2190400321"  # 工软校园用户名
-password = "zz2631992879"  # 工软校园密码（默认同用户名）
+openid = os.getenv('OPENID')  # 微信openid
+username = os.getenv('HITWH_USERNAME')  # 工软校园用户名
+password = os.getenv('HITWH_PASSWORD')  # 工软校园密码（默认同用户名）
 schoolname = "hebgydxwh"  # 学校名称，自己人不用改（哈威之光）
 submitted_form = [  # 要喂给平台啥信息，如果表格内容更新这个也要跟着更新否则会产生严重后果。
     {
