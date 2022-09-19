@@ -1,0 +1,5 @@
+# Netscape HTTP Cookie File
+# http://curl.haxx.se/rfc/cookie_spec.html
+# This is a generated file!  Do not edit.
+
+xy.4009955.com	FALSE	/	FALSE	1663671583	jktb_token	eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJoc29mdHpoeHkiLCJpZCI6Ijk1M2Y0MjgxOTQ1NzQ4ZWU5ODRkNThkNjM1MTdmMzZiIiwiaWF0IjoxNjYzNTg1MTg5LCJleHAiOjE2NjQxODk5ODl9.7yIaPiBjcsAu7nt26YlyLxSpXbJxbq-xUfoTXMVn2lo
