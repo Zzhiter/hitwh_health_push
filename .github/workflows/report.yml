@@ -23,7 +23,7 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
-      - name: make dir
+      - name: make file
         run: |
           touch jktb_error.txt
           echo "# Netscape HTTP Cookie File" > jktb_cookies.txt
